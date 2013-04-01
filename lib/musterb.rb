@@ -1,6 +1,9 @@
 require "erubis"
+require "musterb/config"
 
 module Musterb
+  extend Config
+
   autoload :VERSION,                   "musterb/version"
 
   autoload :ExtractValues,             "musterb/extract_values"

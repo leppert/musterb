@@ -3,7 +3,7 @@ require 'action_view'
 
 class Musterb::TemplateHandler < Musterb::Musterbifier
   def render_partial(partial)
-    "<%= render :partial => '#{partial}', :locals => {:initial_context => musterb.context} %>"
+    "<%= render :#{Musterb.partial_method} => '#{partial}', :locals => {:initial_context => musterb.context} %>"
   end
 
   def text_without_escaping(tokens)
