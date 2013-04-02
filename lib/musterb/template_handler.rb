@@ -7,7 +7,7 @@ class Musterb::TemplateHandler < Musterb::Musterbifier
   end
 
   def text_without_escaping(tokens)
-    "<%= #{tokens}.html_safe %>"
+    "<%== #{tokens} %>"
   end
 
   def text_with_escaping(tokens)
