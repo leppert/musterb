@@ -19,7 +19,7 @@ class Musterb::HashExtractor
   private
   def to_string_access(hash)
     hash.dup.tap do |hash|
-      hash.extend Hashie::HashExtensions
+      hash.extend Hashie::Extensions
       hash.hashie_stringify_keys!
     end
   end
